@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.main-header {
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  color: white;
+  padding-bottom: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.post-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  max-width: 350px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.post-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card img {
+  width: 100%;
+}
+
+.post-card h3 {
+  font-size: 1.4rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+.post-card p {
+  padding: 0 1rem;
+}
+
+.btn {
+  display: block;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background: #ff5f6d;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
